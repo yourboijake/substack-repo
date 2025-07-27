@@ -146,7 +146,7 @@ def train(model, trainloader, testloader, learning_rate, weight_decay,
 Next, we'll use this training function to train train a ViT against the normal cross-entropy loss. Then, we train a ViT against ResNet-18's soft labels using an alpha-weighted average of KL divergence and cross-entropy loss.
 
 ```
-WEIGHT_DECAY = 1e-2 #l2 regularization in loss
+WEIGHT_DECAY = 1e-2 #l2 regularization in cross-entropy loss
 NUM_EPOCHS = 5
 
 vit_normal_results = train(
